@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodcut</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root{
+            --primary-color: #4daf54;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        body{
+            height: 100vh;
+            background-image: linear-gradient(to right, #4daf54, #3d8880);
+        }
+        .card{
+            margin: 120px auto;
+            width: 320px;
+            height: 400px;
+            background-color: #272d40;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            position: relative;
+        }
+        .card_heart, .card_cart{
+            font-size: 25px;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+        }
+        .card_cart{
+            left: unset;
+            right: 20px;
+        }
+
+        .card_img{
+            width: 90%;
+            transition: 0.5s;
+        }
+        .card_img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card_title, .card_price{
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            transition: 0.5s;
+        }
+        .card_title{
+            color: var(--primary-color);
+        }
+        .card_color, .card_size{
+            display: flex;
+            align-items: center;
+            padding: 2px 5px;
+        }
+        .card_size span{
+            padding: 1px 5px;
+            background: #dadada;
+            color: black;
+            border-radius: 5px;
+            margin: 0 4px;
+        }
+        .card_color span{
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            margin: 0 4px;
+        }
+        .card_color_green{
+            background: green;
+        }
+        .card_color_red{
+            background: red;
+        }
+        .card_color_black{
+            background: black;
+        }
+        .card_action button{
+            padding: 10px 20px;
+            font-size: 15px;
+            border-radius: 5px;
+            background-color: #3d8880;
+            margin-right: 5px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+        .card_action button:hover{
+            transform: scale(0.9);
+        }
+        .card:hover .card_img{
+            transform: translateY(-90px) rotate(-20deg);
+        }
+        .card:hover .card_title{
+            transform: translate(-38px,-72px);
+        }
+        .card:hover .card_price{
+            transform: translate(-117px,-72px);
+        }
+        .card_size , .card_color , .card_action{
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.5s;
+            transition-delay: 0.4s;
+        }
+        .card_size{
+            margin-top: 150px;
+        }
+        .card:hover .card_size,
+        .card:hover .card_color,
+        .card:hover .card_action{
+            visibility: visible;
+            opacity: 100;
+        }
+        .card:hover .card_size{
+            margin-top: -30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card_hear">
+            <i class="fa-regular fa-heart"></i>
+        </div>
+        <div class="card_cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="card_img">
+            <img src="Nike Zoom KD 12.png" alt="">
+        </div>
+        <div class="card_title">
+            Nike Zoom KD 12
+        </div>
+        <div class="card_price">
+            $99
+        </div>
+        <div class="card_size">
+            <h2>Size : </h2>
+            <span>6</span>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+        </div>
+        <div class="card_color">
+            <h2>Color : </h2>
+            <span class="card_color_green"></span>
+            <span class="card_color_red"></span>
+            <span class="card_color_black"></span>
+        </div>
+        <div class="card_action">
+            <button>Buy Now</button>
+            <button>ADD Card</button>
+        </div>
+    </div>
+</body>
+
+</html>
